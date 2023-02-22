@@ -1,3 +1,4 @@
+import logo from '../../assets/logo.png'
 import styles from './header.module.css'
 import { AiOutlinePlusCircle } from 'react-icons/ai';
 import { useState } from 'react';
@@ -17,7 +18,7 @@ export function Header ({ onAddTask }){
 
     return(
         <header className={styles.header}>
-            <p>NOSSA LISTA DE FILMES</p>
+            <img src={logo} />
             <form onSubmit={handleSubmit} className={styles.newTaskForm}>
                 <input placeholder='Adicionar um novo filme...' type='text' value={title} onChange={onChangeTitle} />
                 <button>
