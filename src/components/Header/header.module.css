@@ -6,6 +6,11 @@
   height: 200px;
   position: relative;
 }
+
+p{
+  font-size: 30px;
+}
+
 .newTaskForm {
   position: absolute;
   height: 54px;

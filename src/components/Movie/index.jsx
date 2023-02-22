@@ -1,14 +1,14 @@
 import styles from './movie.module.css'
 import { TbTrash } from 'react-icons/tb'
 
-export function Movie (){
+export function Movie({ movie }){
     return(
         <div className={styles.movie}>
             <button className={styles.checkContainer}>
                 <div />
             </button>
 
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat pharetra ipsum at congue.</p>
+            <p>{movie.title}</p>
 
             <button className={styles.deleteButton}>
                 <TbTrash size={20}/>
