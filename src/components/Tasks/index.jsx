@@ -1,7 +1,7 @@
 import styles from './tasks.module.css'
 import { Movie } from '../Movie'
 
-export function Tasks({ tasks }){
+export function Tasks({ tasks, onComplete, onDelete }){
     const tasksQuantity = tasks.length;
     const completedTasks = tasks.filter(movie=>movie.isCompleted).length
 
@@ -19,7 +19,7 @@ export function Tasks({ tasks }){
             </header>
             <div className={styles.list}>
                 {tasks.map(movie=>(
-                    <Movie key={movie.id} movie={movie}/>
+                    <Movie key={movie.id} movie={movie} onComplete={onComplete} onDelete={onDelete}/>
                 ))}
             </div>
         </section>
